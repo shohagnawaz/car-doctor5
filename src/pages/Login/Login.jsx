@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import img from "../../assets/images/login/login.svg";
 
 const Login = () => {
     const handleLogin = event => {
-        event.preventDefault();
-        const form = event.target;
-        const email = form.email.value;
-        const password = form.password.value;
-        console.log(email, password)
+      event.preventDefault();
+      const form = event.target;
+      const email = form.email.value;
+      const password = form.password.value;
+      console.log(email, password)
     }
   return (
     <div className="hero bg-base-200 min-h-screen">
@@ -50,6 +51,9 @@ const Login = () => {
               <input className="btn btn-primary" type="submit" value="Login" />
             </div>
           </form>
+          <p className="text-center mb-4">New To Car Doctors 
+            <Link to="/signUp" className="text-orange-500 font-bold"> Sign Up</Link>
+          </p>
         </div>
       </div>
     </div>
